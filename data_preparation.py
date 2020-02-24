@@ -4,7 +4,7 @@ from sklearn.decomposition import PCA
 from sklearn.preprocessing import StandardScaler
 
 MAX_VALUE_MISSING_ALLOWED = 0
-PCA_NUMBER_COMPONENTS = 200
+PCA_NUMBER_COMPONENTS = 150
 
 
 def delete_columns_with_missing_values(feature_array, max_missing_values=0):
@@ -31,3 +31,5 @@ def prepare_data():
     Z = scale_data(Z)
     Z = apply_pca_analysis(Z, PCA_NUMBER_COMPONENTS)
     return Z, Y
+
+
